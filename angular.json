@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "ng-alex-calendar": {
+      "projectType": "library",
+      "root": "projects/ng-alex-calendar",
+      "sourceRoot": "projects/ng-alex-calendar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-alex-calendar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-alex-calendar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-alex-calendar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-alex-calendar/src/test.ts",
+            "tsConfig": "projects/ng-alex-calendar/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-alex-calendar/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-subs-n-lib"
