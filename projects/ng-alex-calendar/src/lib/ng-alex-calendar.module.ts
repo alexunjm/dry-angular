@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { NgAlexCalendarComponent } from './ng-alex-calendar.component';
-import { NgAlexCalendarService } from './ng-alex-calendar.service';
 
 @NgModule({
   declarations: [NgAlexCalendarComponent],
   imports: [],
-  exports: [NgAlexCalendarComponent, NgAlexCalendarService],
+  exports: [NgAlexCalendarComponent],
+  providers: [],
 })
 export class NgAlexCalendarModule {}
